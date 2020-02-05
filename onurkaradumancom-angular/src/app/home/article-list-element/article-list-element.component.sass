@@ -1,0 +1,87 @@
+$category-bg-color1: #50b6d0
+$category-bg-color2: #fe886d
+
+a
+    text-decoration: none
+
+.article-container
+    background-color: #fff
+    font-family: 'Lato'
+    width: 50%
+    margin-top: 5%
+    margin-left: 30%
+    font: normal normal normal 14px/1 FontAwesome
+
+.article-category-first
+    background-color: $category-bg-color1
+    width: 10%
+    padding: 4%
+
+.article-category-first::before
+    content: "\f02b"
+    margin-right: 10%
+    margin-left: 0
+
+    // "\f073"
+.article-category-second
+    background-color: $category-bg-color2
+    width: 10%
+    padding: 4%
+
+.article-category-second::before
+    content: "\f02b"
+    margin-right: 10%
+    margin-left: 0
+
+.article-category-first a
+    color: #ffffff
+
+.article-category-second a
+    color: #ffffff
+
+.article-category::before
+    content: ""
+    display: block
+    border-left: 60px solid #50b6d0
+
+.article-title
+    font-weight: 900
+    padding-left: 3%
+
+.article-title a
+    text-decoration: none
+    color: #000000
+
+.article-meta
+    padding-left: 3%
+
+.postedBy-icon::before
+    content: "\f007"
+    margin-right: 2%
+
+.postedBy-span
+    color: #9d9d9d
+    margin-right: 2%
+
+.postedBy-span a
+    color: #9d9d9d
+
+.postedDate-icon::before
+    content: "\f073"
+    margin-right: 2%
+
+.postedDate-span
+    color: #9d9d9d
+    margin-right: 2%
+
+.postedDate-span a
+    color: #9d9d9d
+    
+.article-content
+    margin-top: 5%
+    line-height: 2
+    padding-left: 3%
+    padding-right: 3%
+
+.moretag a
+    color: #ff7f66

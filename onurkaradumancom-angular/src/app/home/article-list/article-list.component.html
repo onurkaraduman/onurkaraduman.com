@@ -1,0 +1,9 @@
+<div *ngIf="articles" class="articles-container">
+    <app-article-list-element *ngFor="let article of activeArticles; let i = index" [article]="article" [orderNumber]="i">
+    </app-article-list-element>
+    <div class="article-pages">
+        <ul id="page">
+            <li *ngFor='let pageNumber of pageList'><a [routerLink]="['/home/page',pageNumber]">{{pageNumber}}</a></li>
+        </ul>
+    </div>
+</div>

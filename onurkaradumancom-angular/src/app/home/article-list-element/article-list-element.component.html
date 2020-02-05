@@ -1,0 +1,37 @@
+<div *ngIf="article" class="article-container">
+    <div [ngClass]="{'article-category-first': orderNumber%2 !== 0, 'article-category-second': orderNumber%2 === 0}">
+        <a routerLink="/home/filter" [queryParams]="{category:article.category}"
+            rel="category tag">{{article.category}}</a>
+    </div>
+    <div class="article-inner">
+        <header class="article-header">
+            <div class="article-title">
+                <h1><a [routerLink]="['/article/',article.fileName]">{{article.title}}</a></h1>
+            </div>
+            <div class="article-meta">
+                <span class="postedBy-span">
+                    <i class="postedBy-icon"></i>
+                    <a routerLink="/home/filter" [queryParams]="{postedBy:article.postedBy}">{{article.postedBy}} </a>
+                </span>
+                <span class="postedDate-span">
+                    <i class="postedDate-icon"></i>
+                    <a routerLink="/home/filter" [queryParams]="{date:article.date}" rel="bookmark">
+                        <time class="entry-date published">{{article.date}}</time>
+                    </a>
+                </span>
+            </div>
+        </header>
+        <div class="article-content">
+            <div>
+                <p>
+                    {{article.content}}
+                </p>
+            </div>
+            <div class="moretag">
+                <a [routerLink]="['/article/',article.fileName]">
+                    Read more&nbsp;→&nbsp;
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
