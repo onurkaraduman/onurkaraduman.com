@@ -3,13 +3,12 @@ import { Observable } from 'rxjs';
 import { Article } from '../models/article';
 import { HttpClient } from '@angular/common/http';
 import { map } from "rxjs/operators";
+import { environment } from "../../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ArticleService {
-
-  assetsDirectory: string = "assets/";
 
   constructor(public httpclient: HttpClient) { }
 
@@ -29,10 +28,12 @@ export class ArticleService {
   }
 
   private getFullPathOfArticleList() {
-    return this.assetsDirectory + "articles/articles.json";
+    let blogContentUrl = environment.blog_content_url;
+    return blogContentUrl + "/" + "articles/articles.json";
   }
 
   private getFullPathOfArticle(name: String, category: String) {
-    return this.assetsDirectory + "articles/" + category + "/" + name;
+    let blogContentUrl = environment.blog_content_url;
+    return blogContentUrl + "/" + "articles/" + category + "/" + name;
   }
 }
