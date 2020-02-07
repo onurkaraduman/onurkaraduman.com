@@ -102,7 +102,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "<div class=\"header-wrapper\">\n    <div class=\"header-container\">\n        <div class=\"header-branding\">\n            <h1 class=\"site-title\"><a href=\"{{baseUrl}}\" rel=\"home\">{{headerConfig.title}}</a></h1>\n            <h2 class=\"site-description\">{{headerConfig.description}}</h2>\n        </div>\n    </div>\n</div>";
+    __webpack_exports__["default"] = "<div class=\"header-wrapper\">\n    <div class=\"header-container\">\n        <div class=\"header-branding\">\n            <h1 class=\"site-title\"><a routerLink=\"/home\">{{headerConfig.title}}</a></h1>\n            <h2 class=\"site-description\">{{headerConfig.description}}</h2>\n        </div>\n    </div>\n</div>";
     /***/
   },
 
