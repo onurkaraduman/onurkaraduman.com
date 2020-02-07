@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  blog_content_url:"assets"
 };
