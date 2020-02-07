@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'onurkaradumancom-angular'`, () => {
+  it(`should have as title 'onurkaraduman.com'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('onurkaradumancom-angular');
+    expect(app.title).toEqual('onurkaraduman.com');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('onurkaradumancom-angular app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('onurkaraduman.com app is running!');
   });
 });
