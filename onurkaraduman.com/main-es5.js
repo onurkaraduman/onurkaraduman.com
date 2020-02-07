@@ -789,7 +789,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     var AppComponent = function AppComponent() {
       _classCallCheck(this, AppComponent);
 
-      this.title = 'onurkaradumancom-angular';
+      this.title = 'onurkaraduman.com';
     };
 
     AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -1045,7 +1045,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = ".footer-container {\n  padding: 1%;\n  background-color: #fff;\n}\n\n.footer-info {\n  margin-left: 40%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL29udXIvUHJvamVjdHMvYW5ndWxhci9vbnVya2FyYWR1bWFuLmNvbS9vbnVya2FyYWR1bWFuY29tLWFuZ3VsYXIvc3JjL2FwcC9zaGFyZWQvbGF5b3V0L2Zvb3Rlci9mb290ZXIuY29tcG9uZW50LnNhc3MiLCJzcmMvYXBwL3NoYXJlZC9sYXlvdXQvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNJLFdBQUE7RUFDQSxzQkFBQTtBQ0NKOztBREFBO0VBQ0ksZ0JBQUE7QUNHSiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC9sYXlvdXQvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuc2FzcyIsInNvdXJjZXNDb250ZW50IjpbIi5mb290ZXItY29udGFpbmVyXG4gICAgcGFkZGluZzogMSVcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmXG4uZm9vdGVyLWluZm9cbiAgICBtYXJnaW4tbGVmdDogNDAlIiwiLmZvb3Rlci1jb250YWluZXIge1xuICBwYWRkaW5nOiAxJTtcbiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjtcbn1cblxuLmZvb3Rlci1pbmZvIHtcbiAgbWFyZ2luLWxlZnQ6IDQwJTtcbn0iXX0= */";
+    __webpack_exports__["default"] = ".footer-container {\n  padding: 1%;\n  background-color: #fff;\n}\n\n.footer-info {\n  margin-left: 40%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL29udXIvUHJvamVjdHMvYW5ndWxhci9vbnVya2FyYWR1bWFuLmNvbS9zcmMvYXBwL3NoYXJlZC9sYXlvdXQvZm9vdGVyL2Zvb3Rlci5jb21wb25lbnQuc2FzcyIsInNyYy9hcHAvc2hhcmVkL2xheW91dC9mb290ZXIvZm9vdGVyLmNvbXBvbmVudC5zYXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0ksV0FBQTtFQUNBLHNCQUFBO0FDQ0o7O0FEQUE7RUFDSSxnQkFBQTtBQ0dKIiwiZmlsZSI6InNyYy9hcHAvc2hhcmVkL2xheW91dC9mb290ZXIvZm9vdGVyLmNvbXBvbmVudC5zYXNzIiwic291cmNlc0NvbnRlbnQiOlsiLmZvb3Rlci1jb250YWluZXJcbiAgICBwYWRkaW5nOiAxJVxuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmZcbi5mb290ZXItaW5mb1xuICAgIG1hcmdpbi1sZWZ0OiA0MCUiLCIuZm9vdGVyLWNvbnRhaW5lciB7XG4gIHBhZGRpbmc6IDElO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xufVxuXG4uZm9vdGVyLWluZm8ge1xuICBtYXJnaW4tbGVmdDogNDAlO1xufSJdfQ== */";
     /***/
   },
 
@@ -1156,7 +1156,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
     /* harmony default export */
 
 
-    __webpack_exports__["default"] = "a {\n  text-decoration: none;\n}\n\n.header-wrapper {\n  background-color: #fff;\n}\n\n.site-title {\n  font-size: 20px;\n}\n\n.site-title a {\n  color: #000000;\n}\n\n.header-container {\n  margin-left: 30%;\n}\n\n.site-description {\n  color: #767676;\n  font-size: 15px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL29udXIvUHJvamVjdHMvYW5ndWxhci9vbnVya2FyYWR1bWFuLmNvbS9vbnVya2FyYWR1bWFuY29tLWFuZ3VsYXIvc3JjL2FwcC9zaGFyZWQvbGF5b3V0L2hlYWRlci9oZWFkZXIuY29tcG9uZW50LnNhc3MiLCJzcmMvYXBwL3NoYXJlZC9sYXlvdXQvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2FzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQTtFQUNJLHFCQUFBO0FDQUo7O0FERUE7RUFDSSxzQkFBQTtBQ0NKOztBRENBO0VBQ0ksZUFBQTtBQ0VKOztBREFBO0VBQ0ksY0FBQTtBQ0dKOztBRERBO0VBQ0ksZ0JBQUE7QUNJSjs7QURGQTtFQUNJLGNBQUE7RUFDQSxlQUFBO0FDS0oiLCJmaWxlIjoic3JjL2FwcC9zaGFyZWQvbGF5b3V0L2hlYWRlci9oZWFkZXIuY29tcG9uZW50LnNhc3MiLCJzb3VyY2VzQ29udGVudCI6WyJcbmFcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmVcblxuLmhlYWRlci13cmFwcGVyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZlxuXG4uc2l0ZS10aXRsZVxuICAgIGZvbnQtc2l6ZTogMjBweFxuXG4uc2l0ZS10aXRsZSBhXG4gICAgY29sb3I6ICMwMDAwMDBcblxuLmhlYWRlci1jb250YWluZXJcbiAgICBtYXJnaW4tbGVmdDogMzAlXG5cbi5zaXRlLWRlc2NyaXB0aW9uXG4gICAgY29sb3I6ICM3Njc2NzZcbiAgICBmb250LXNpemU6IDE1cHgiLCJhIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xufVxuXG4uaGVhZGVyLXdyYXBwZXIge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmO1xufVxuXG4uc2l0ZS10aXRsZSB7XG4gIGZvbnQtc2l6ZTogMjBweDtcbn1cblxuLnNpdGUtdGl0bGUgYSB7XG4gIGNvbG9yOiAjMDAwMDAwO1xufVxuXG4uaGVhZGVyLWNvbnRhaW5lciB7XG4gIG1hcmdpbi1sZWZ0OiAzMCU7XG59XG5cbi5zaXRlLWRlc2NyaXB0aW9uIHtcbiAgY29sb3I6ICM3Njc2NzY7XG4gIGZvbnQtc2l6ZTogMTVweDtcbn0iXX0= */";
+    __webpack_exports__["default"] = "a {\n  text-decoration: none;\n}\n\n.header-wrapper {\n  background-color: #fff;\n}\n\n.site-title {\n  font-size: 20px;\n}\n\n.site-title a {\n  color: #000000;\n}\n\n.header-container {\n  margin-left: 30%;\n}\n\n.site-description {\n  color: #767676;\n  font-size: 15px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9ob21lL29udXIvUHJvamVjdHMvYW5ndWxhci9vbnVya2FyYWR1bWFuLmNvbS9zcmMvYXBwL3NoYXJlZC9sYXlvdXQvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2FzcyIsInNyYy9hcHAvc2hhcmVkL2xheW91dC9oZWFkZXIvaGVhZGVyLmNvbXBvbmVudC5zYXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUNBO0VBQ0kscUJBQUE7QUNBSjs7QURFQTtFQUNJLHNCQUFBO0FDQ0o7O0FEQ0E7RUFDSSxlQUFBO0FDRUo7O0FEQUE7RUFDSSxjQUFBO0FDR0o7O0FEREE7RUFDSSxnQkFBQTtBQ0lKOztBREZBO0VBQ0ksY0FBQTtFQUNBLGVBQUE7QUNLSiIsImZpbGUiOiJzcmMvYXBwL3NoYXJlZC9sYXlvdXQvaGVhZGVyL2hlYWRlci5jb21wb25lbnQuc2FzcyIsInNvdXJjZXNDb250ZW50IjpbIlxuYVxuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZVxuXG4uaGVhZGVyLXdyYXBwZXJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZmZmXG5cbi5zaXRlLXRpdGxlXG4gICAgZm9udC1zaXplOiAyMHB4XG5cbi5zaXRlLXRpdGxlIGFcbiAgICBjb2xvcjogIzAwMDAwMFxuXG4uaGVhZGVyLWNvbnRhaW5lclxuICAgIG1hcmdpbi1sZWZ0OiAzMCVcblxuLnNpdGUtZGVzY3JpcHRpb25cbiAgICBjb2xvcjogIzc2NzY3NlxuICAgIGZvbnQtc2l6ZTogMTVweCIsImEge1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG59XG5cbi5oZWFkZXItd3JhcHBlciB7XG4gIGJhY2tncm91bmQtY29sb3I6ICNmZmY7XG59XG5cbi5zaXRlLXRpdGxlIHtcbiAgZm9udC1zaXplOiAyMHB4O1xufVxuXG4uc2l0ZS10aXRsZSBhIHtcbiAgY29sb3I6ICMwMDAwMDA7XG59XG5cbi5oZWFkZXItY29udGFpbmVyIHtcbiAgbWFyZ2luLWxlZnQ6IDMwJTtcbn1cblxuLnNpdGUtZGVzY3JpcHRpb24ge1xuICBjb2xvcjogIzc2NzY3NjtcbiAgZm9udC1zaXplOiAxNXB4O1xufSJdfQ== */";
     /***/
   },
 
@@ -1376,7 +1376,7 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
   /***/
   function _(module, exports, __webpack_require__) {
     module.exports = __webpack_require__(
-    /*! /home/onur/Projects/angular/onurkaraduman.com/onurkaradumancom-angular/src/main.ts */
+    /*! /home/onur/Projects/angular/onurkaraduman.com/src/main.ts */
     "./src/main.ts");
     /***/
   }
