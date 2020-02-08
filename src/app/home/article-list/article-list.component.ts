@@ -10,6 +10,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ArticleListComponent implements OnInit {
 
+  DEFAULT_SUMMARY_CHARS = 500
+
   @Input()
   articles: Article[];
 
@@ -57,7 +59,11 @@ export class ArticleListComponent implements OnInit {
     for (let index = 0; index < this.activeArticles.length; index++) {
       let article = this.articles[index];
       this.articleService.getArticleContent(article.fileName, article.category).subscribe(content => {
-        article.content = content.toString().slice(0, article.summaryCharacters);
+        let summaryChars = this.DEFAULT_SUMMARY_CHARS;
+        if (article.summaryCharacters) {
+          summaryChars = article.summaryCharacters;
+        }
+        article.content = content.toString().slice(0, summaryChars);
       });
     }
     this.cleanUpNonDisplayedArticlesContent();

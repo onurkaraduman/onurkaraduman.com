@@ -1,6 +1,16 @@
 # OnurkaradumancomAngular
+The migration has been done from http://www.onurkaraduman.com/
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
+## Github Pages
+Build
+```
+ng build --base-href /onurkaraduman.com/
+```
+Publis
+```
+sudo gh-pages -d dist/onurkaraduman.com
+```
+
 
 ## Development server
 

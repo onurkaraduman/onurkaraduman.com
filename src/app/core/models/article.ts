@@ -1,10 +1,10 @@
 export class Article {
-    title:String;
-    content:String;
-    fileName:String;
-    category:String;
-    postedBy:String;
-    date:String;
-    summaryCharacters:number
+    title: string;
+    content: string;
+    fileName: string;
+    category: string;
+    postedBy: string;
+    date: string;
+    summaryCharacters: number
 
 }

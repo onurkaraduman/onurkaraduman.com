@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   articles: Article[];
   articlePerPage: number;
 
-  filter:Map<string,string> = new Map();
+  filter: Map<string, string> = new Map();
 
 
   constructor(private articleService: ArticleService,
@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     let params = this.activatedRoute.snapshot.queryParams;
-    if(params){
+    if (params) {
       let key = Object.keys(params)[0];
       let value = params[key];
       this.filter.set(key, value);
@@ -40,13 +40,17 @@ export class HomeComponent implements OnInit {
 
   initArticles() {
     this.articleService.getArticleList().subscribe(articles => {
-      if(this.filter.size){
-        let filteredArticles = articles;
-        for (let [key,value] of this.filter) {
-           filteredArticles = filteredArticles.filter(a => a[key] === value);
-        }
-        this.articles = filteredArticles;
+      let filteredArticles = articles;
+      for (let [key, value] of this.filter) {
+        filteredArticles = filteredArticles.filter(a => a[key] === value);
       }
+      filteredArticles.sort((a, b) => {
+        let date1 = new Date(a.date);
+        let date2 = new Date(b.date);
+        // sort by desc
+        return date2.getTime() - date1.getTime();
+      })
+      this.articles = filteredArticles;
     })
   }
 }

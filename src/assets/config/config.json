@@ -13,6 +13,6 @@
         "name": "white"
     },
     "articleConfig": {
-        "articlePerPage": "2"
+        "articlePerPage": "10"
     }
 }
