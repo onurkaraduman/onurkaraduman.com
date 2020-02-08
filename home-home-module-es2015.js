@@ -124,6 +124,7 @@ let ArticleListComponent = class ArticleListComponent {
     constructor(articleService, activatedRoute) {
         this.articleService = articleService;
         this.activatedRoute = activatedRoute;
+        this.DEFAULT_SUMMARY_CHARS = 500;
         this.pageList = [];
     }
     ngOnInit() {
@@ -156,7 +157,11 @@ let ArticleListComponent = class ArticleListComponent {
         for (let index = 0; index < this.activeArticles.length; index++) {
             let article = this.articles[index];
             this.articleService.getArticleContent(article.fileName, article.category).subscribe(content => {
-                article.content = content.toString().slice(0, article.summaryCharacters);
+                let summaryChars = this.DEFAULT_SUMMARY_CHARS;
+                if (article.summaryCharacters) {
+                    summaryChars = article.summaryCharacters;
+                }
+                article.content = content.toString().slice(0, summaryChars);
             });
         }
         this.cleanUpNonDisplayedArticlesContent();
@@ -337,13 +342,17 @@ let HomeComponent = class HomeComponent {
     }
     initArticles() {
         this.articleService.getArticleList().subscribe(articles => {
-            if (this.filter.size) {
-                let filteredArticles = articles;
-                for (let [key, value] of this.filter) {
-                    filteredArticles = filteredArticles.filter(a => a[key] === value);
-                }
-                this.articles = filteredArticles;
+            let filteredArticles = articles;
+            for (let [key, value] of this.filter) {
+                filteredArticles = filteredArticles.filter(a => a[key] === value);
             }
+            filteredArticles.sort((a, b) => {
+                let date1 = new Date(a.date);
+                let date2 = new Date(b.date);
+                // sort by desc
+                return date2.getTime() - date1.getTime();
+            });
+            this.articles = filteredArticles;
         });
     }
 };

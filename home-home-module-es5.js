@@ -226,6 +226,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
         this.articleService = articleService;
         this.activatedRoute = activatedRoute;
+        this.DEFAULT_SUMMARY_CHARS = 500;
         this.pageList = [];
       }
 
@@ -274,7 +275,13 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
             var article = _this2.articles[index];
 
             _this2.articleService.getArticleContent(article.fileName, article.category).subscribe(function (content) {
-              article.content = content.toString().slice(0, article.summaryCharacters);
+              var summaryChars = _this2.DEFAULT_SUMMARY_CHARS;
+
+              if (article.summaryCharacters) {
+                summaryChars = article.summaryCharacters;
+              }
+
+              article.content = content.toString().slice(0, summaryChars);
             });
           };
 
@@ -578,43 +585,47 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           var _this4 = this;
 
           this.articleService.getArticleList().subscribe(function (articles) {
-            if (_this4.filter.size) {
-              var filteredArticles = articles;
-              var _iteratorNormalCompletion = true;
-              var _didIteratorError = false;
-              var _iteratorError = undefined;
+            var filteredArticles = articles;
+            var _iteratorNormalCompletion = true;
+            var _didIteratorError = false;
+            var _iteratorError = undefined;
 
+            try {
+              var _loop2 = function _loop2() {
+                var _step$value = _slicedToArray(_step.value, 2),
+                    key = _step$value[0],
+                    value = _step$value[1];
+
+                filteredArticles = filteredArticles.filter(function (a) {
+                  return a[key] === value;
+                });
+              };
+
+              for (var _iterator = _this4.filter[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+                _loop2();
+              }
+            } catch (err) {
+              _didIteratorError = true;
+              _iteratorError = err;
+            } finally {
               try {
-                var _loop2 = function _loop2() {
-                  var _step$value = _slicedToArray(_step.value, 2),
-                      key = _step$value[0],
-                      value = _step$value[1];
-
-                  filteredArticles = filteredArticles.filter(function (a) {
-                    return a[key] === value;
-                  });
-                };
-
-                for (var _iterator = _this4.filter[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-                  _loop2();
+                if (!_iteratorNormalCompletion && _iterator.return != null) {
+                  _iterator.return();
                 }
-              } catch (err) {
-                _didIteratorError = true;
-                _iteratorError = err;
               } finally {
-                try {
-                  if (!_iteratorNormalCompletion && _iterator.return != null) {
-                    _iterator.return();
-                  }
-                } finally {
-                  if (_didIteratorError) {
-                    throw _iteratorError;
-                  }
+                if (_didIteratorError) {
+                  throw _iteratorError;
                 }
               }
-
-              _this4.articles = filteredArticles;
             }
+
+            filteredArticles.sort(function (a, b) {
+              var date1 = new Date(a.date);
+              var date2 = new Date(b.date); // sort by desc
+
+              return date2.getTime() - date1.getTime();
+            });
+            _this4.articles = filteredArticles;
           });
         }
       }]);
