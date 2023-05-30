@@ -10,7 +10,7 @@
     "e2e": "ng e2e",
     "ghdeploy": "sudo gh-pages -d dist/onurkaraduman.com"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "~8.2.13",
     "@angular/common": "~8.2.13",
