@@ -4,7 +4,11 @@ The migration has been done from http://www.onurkaraduman.com/
 ## Github Pages
 Build
 ```
+# for github
 ng build --base-href /onurkaraduman.com/
+
+# for custom domain
+ng build --base-href /
 ```
 Publis
 ```
