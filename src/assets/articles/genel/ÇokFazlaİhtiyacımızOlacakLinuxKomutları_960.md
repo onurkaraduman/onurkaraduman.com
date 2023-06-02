@@ -1,81 +1,121 @@
-<h3>The * wildcard</h3>
-Bir veya birden çok karakterler anlamına gelir.
-<pre>% ls list*
-</pre>
-<h3>The ? wildcard</h3>
-Sadece bir karakter anlamına gelir.
-<pre>% ls ?list
-</pre>
-<h3>cat (concatenate)</h3>
-Tum datayı ekrana basar. Yani kısa metinler iceren dosyalar icin uygundur ama uzun dosylara icin pek uygun olmaz. Arama filan yapamazsınız. Mesela çok kısa bir script içeren bir dosyamız vardır ve ne yazmışım ben diye bir goz atmak icin kullanılabilir.
-<pre>% cat science.txt
-</pre>
-Asagidaki komutlarıda deneyelim.
-<pre>% cat
-</pre>
-Şimdi birşeyler yazıp entera basın. User Inputları yazdırdıgını goreceksiniz.
+## Comparing two binary files
 
-Aşagıdaki komut ile kullanıcı inputlarını science.txt dosyasına yazar.
-<pre>% cat &gt; science.txt
-</pre>
-<h3>less</h3>
-cat komutunun gelistirilmis halidir diyebiliriz. Datayı ekrana sayfalar halinde getirir. Ve data icerisinde arama yapabilirsiniz.
-<pre>% less science.txt
-</pre>
-Bu komutu calistirdiktan sonra space ile sayfalar arasında dolasabilir, q karakteri ile cıkıs yapabilirsiniz. Arama yapabilmek icin "?" veya "/" yazıp ve ardından aramak istediginiz metini girip entera basmanız yeterli olacaktır. "n" ile bulunan satırlar arasında dolasabilirsiniz. Yada dosyanın sonuna gidebilmek icin shift+&lt; veya basina gidebilmek icin shift+&gt; tus kombinelerini kullanabilirsiniz.
-<h3>head</h3>
-Bu komut verilen dosyanın icerisinde mevcut olan datanın ilk 10 satirini getirir.
-<pre>% head science.txt
-</pre>
-Aşagidaki komut ile baştan itibaren kac tane satırı getirmek istediginizi girebilirsiniz.
-<pre>% head -5 science.txt
-</pre>
-<h3>tail</h3>
-Bu komut dosyanın son 10 satırını getirir.
-<pre>% tail science.txt
-</pre>
-Aşagıdaki komut ile dosyanın sonundan itibaren kac tane satırı getirmek istedigimizi parametre olarak verebiliriz.
-<pre>% tail -n 20 science.txt
-</pre>
-Aşagıdaki komut ise en cok isimize yarayan komuttur. Surekli icerisine bilgi eklenen bir dosyanız var ve data akısını canlı olarak takip etmek istiyorsanız bu komutu kullnırsınız. Yani log dosylarını bu şekilde canlı olorak takip edebiliriz.
-<pre>% tail -f science.txt
-</pre>
-<h3>grep</h3>
-Bu komut dosya icrisinde verdigimiz keyworde uygun olan satırları yazdırır. Bu komutun caseSensitive olduguna dikkat edin.
-<pre>% grep science science.txt
-</pre>
-Ama -i parametresi ile buyuk kucuk harf ayrımını ortadan kaldırabiliriz.
-<pre>% grep -i Science science.txt
-</pre>
-<h3>wc (word count)</h3>
-Kaç adet kelime var.
-<pre>% wc -w science.txt
-</pre>
-Kaç adet satır var.
-<pre>% wc -l science.txt
-</pre>
-<h3>Apropos</h3>
-Eger komutun tam olarak bilmiyorsanız. Bu komut vasıtasıyla bulabilirsiniz.
-<pre>% apropos keyword</pre>
+```
+diff -y <(xxd file1.txt) <(xxd file2.txt)
+```
 
-<strong>Sed
+## size of directory
+```
+ncdu
+```
 
-</strong><span class="hljs-attribute">Eger bir klasordeki dosyalar icerisindeki belirli bir stringi baska bir string ile degistirmek istiyorsaniz.</span><strong>
+## list size of directory
+```
+du -sh *
+```
 
-<pre>
-grep -rl matchstring somedir/ | xargs sed -i <span class="hljs-string">'s/string1/string2/g'
-</pre>
+### list size of directory with order
+```
+du -sk * | sort -n
+```
 
-<strong>
-Tar
-</strong>
-<span>Eger arsiv icerisindeki dosylari arsivi acmadan gormek istiyorsaniz</span>
-<pre>
-tar -tf <archive.tar>
-</pre>
+## Passing arguments to grep 
+```
+grep ".noname" application.properties | awk '{print substr($1,0,index($1,".prod"))}' | xargs -I{} grep {} application2.properties 
+```
 
-<strong>
-Cache ve Buffer Temizligi
-</strong>
+## Grep two file and diff
+```
+diff <(grep "vm.args" test1.txt) <(grep "vm.args" test2.txt )
+```
+## Show cpu usage for each thread
+```
+top -n 1 -H -p <pid>
+```
+## Freeing Disk Space
+https://itsfoss.com/free-up-space-ubuntu-linux/ 
 
-<pre>free && sync && echo 3 > /proc/sys/vm/drop_caches && free</pre>
+Get rid of packages that are no longer required
+```
+sudo apt-get autoremove
+```
+
+ Clean up APT cache in Ubuntu
+ where cache is
+ ```
+ sudo du -sh /var/cache/apt 
+ ```
+ 
+ clean up
+```
+sudo apt-get clean
+```
+
+Clear systemd journal logs [Intermediate knowledge]
+see usage
+```
+journalctl --disk-usage
+```
+clean up (older than 3d)
+```
+sudo journalctl --vacuum-time=3d
+```
+
+Uninstall Unused Applications Through the Command Line
+list all deb packages
+```
+dpkg --list
+```
+
+remove specific package
+```
+sudo apt-get purge “package-name”
+```
+
+## If Else condition
+```
+[ "$3" -lt 480 ] -- numeric comparison, compatible with all POSIX shells
+[ "$3" \< 480 ] -- string comparison (generally wrong for numbers!), compatible with all POSIX shells
+[[ $3 < 480 ]] -- string comparison (generally wrong for numbers!), bash and ksh only
+(( $3 < 480 )) -- numeric comparison, bash and ksh only
+(( var < 480 )) -- numeric comparison, bash and ksh only, where $var is a variable containing a number
+```
+*example*
+```
+if ((2 < 4)); then echo 'ok'; fi
+```
+
+## Swap usage
+https://blog.sleeplessbeastie.eu/2016/12/26/how-to-display-processes-using-swap-space/
+```
+find /proc -maxdepth 2 -path "/proc/[0-9]*/status" -readable -exec awk -v FS=":" '{process[$1]=$2;sub(/^[ \t]+/,"",process[$1]);} END {if(process["VmSwap"] && process["VmSwap"] != "0 kB") printf "%10s %-30s %20s\n",process["Pid"],process["Name"],process["VmSwap"]}' '{}' \; | awk '{print $(NF-1),$0}' | sort -hr | head | cut -d " " -f2-
+```
+
+# How to setup custom NTP(network time protocol) server
+add your server to /etc/ntp.conf
+
+example:
+```
+server example-ntp.onurkaraduman.com iburst
+```
+then restart ntp service
+```
+sudo /etc/init.d/ntp restart
+```
+
+# Nomachine
+If nomachine clients is not able to create virtual desktop, stop display manager on nomachine server first
+````
+sudo systemctl stop display-manager
+````
+----
+# Aliases
+```
+alias cleanupMavenRepo='find -type d -name $1 | xargs rm -rf' alias mvnrunmain='mvn compile exec:java -Dexec.mainClass="$1"' alias mvn_debug='mvn -Dmaven.surefire.debug test
+```
+```
+alias keyshow='keytool -list -keystore $1 -storetype pkcs12 -v' alias certshow='openssl x509 -inform der -in $1 -noout -text' alias showWebserverCert='openssl s_client -host $1 -port $2 -prexit -showcerts' alias showSupportedCiphers='nmap --script ssl-enum-ciphers -p $2 $1' alias show_java_cacerts='echo 'changeit' | keytool -list -v -keystore $(find $JAVA_HOME -name cacerts) | grep 'Owner:''
+```
+```
+alias showspace='du -h * | sort -rh | head -5'
+```
