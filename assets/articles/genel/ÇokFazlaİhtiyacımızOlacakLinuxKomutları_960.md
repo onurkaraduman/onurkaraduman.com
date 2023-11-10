@@ -119,3 +119,7 @@ alias keyshow='keytool -list -keystore $1 -storetype pkcs12 -v' alias certshow='
 ```
 alias showspace='du -h * | sort -rh | head -5'
 ```
+# Check systemctl service log
+```
+journalctl -u <servicename>
+```
