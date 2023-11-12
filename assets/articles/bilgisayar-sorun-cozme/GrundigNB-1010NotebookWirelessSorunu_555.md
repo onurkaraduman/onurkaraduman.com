@@ -1,5 +1,0 @@
-&nbsp;
-
-Grundig nb-1010 marka notebookumun wirelessini bi türlü açamıyodum.Üzerindeki tuş kombinasyonuyla açılmıyo rdu bi türlü.Wireless ışığı yanyodu ama sadce yanyodu.Hic bir ağ bulamyodu.Ve sorunları algıla dedigim zaman wirelesin kapali diyodu.Windows mobile center ı acıyorum ordada acma butonu pasif gozukuyodu.Yani basamyodum.Biraz araştırdım basit bir teknikle şu an açabilyorum.Ama tuş kombinasyonu hala işe yaramyo.Hatta driverı yeniden yüklememe rağmen ise yaramadı.
-
-Başlata services.msc yazıyoruz.Gelen kısma tıklıyoruz.Burda bilgisayarda çalışan tüm servisler yer alıyor.Burdan "KABLOSUZ YEREL AĞ OTOMATİK YAPILANDIRMA"ya sağ tıklatıp yeniden başlat diyoruz.                                     Yeniden başlattıktan sonra ekranın sağ alt tarafında bulunan wireless kısmını acıyoruz.                                                        Orda hala açılmamış gozukyo.Sorun gider diyoruz.Sorunu wireless kapalı olarak bulyo yine.                                                 Buradan sorunu düzelt diyoruz ve wireless açılyo.Her defasında aynı şeyi yapmamız lazım.                                               Belki format atılınca düzelebilir ama.
