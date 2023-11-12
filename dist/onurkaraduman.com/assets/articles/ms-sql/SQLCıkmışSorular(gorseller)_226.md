@@ -1,0 +1,3 @@
+<a href="http://www.onurkaraduman.com/wp-content/uploads/veriTabaniSinav.png"><img class="alignnone size-medium wp-image-227" title="veriTabaniSinav" src="http://www.onurkaraduman.com/wp-content/uploads/veriTabaniSinav-300x214.png" alt="" width="300" height="214" /></a>
+
+<a href="http://www.onurkaraduman.com/wp-content/uploads/veritabanısoruları.jpg"><img class="alignnone size-medium wp-image-228" title="veritabanısoruları" src="http://www.onurkaraduman.com/wp-content/uploads/veritabanısoruları-300x226.jpg" alt="" width="300" height="226" /></a>

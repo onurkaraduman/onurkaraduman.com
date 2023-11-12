@@ -1,0 +1,18 @@
+{
+    "header": {
+        "title": "Onur Karaduman",
+        "description": "Software Engineer",
+        "githubLink": "onurkaraduman.com"
+    },
+    "footer": {
+        "info": "developed by",
+        "developer": "onurkaraduman",
+        "developerGithupProfileLink": "https://github.com/onurkaraduman"
+    },
+    "theme": {
+        "name": "white"
+    },
+    "articleConfig": {
+        "articlePerPage": "10"
+    }
+}
